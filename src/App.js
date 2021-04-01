@@ -1,7 +1,7 @@
 import "./styles.css";
 import { TaskCard } from "./TaskCard";
 import { Title } from "./Title";
-import { Btn } from "./Btn";
+import { Button } from "./Button";
 import { BtnMore } from "./BtnMore";
 import { CheckBoxBig } from "./CheckBoxBig";
 import { HeaderUp } from "./HeaderUp";
@@ -26,7 +26,7 @@ export default function App() {
       <div className="task-list__container">
         <div className="task-list__wrapper task-list__wrapper__title-position">
           <Title title="Backlog" />
-          <Btn text="+ Add task" />
+          <Button text="+ Add task" />
         </div>
         <div className="task-list__wrapper">
           <TaskCard
@@ -54,7 +54,7 @@ export default function App() {
         </div>
         <div className="task-list__wrapper task-list__wrapper__todo-position">
           <Title title="To Do" />
-          <Btn text="+ Add task" />
+          <Button text="+ Add task" />
         </div>
         <div className="task-list__wrapper">
           <TaskCard

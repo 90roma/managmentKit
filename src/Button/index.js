@@ -1,6 +1,7 @@
 import React from "react";
+import './style.css'
 
-const Btn = (props) => {
+const Button = (props) => {
   return (
     <div className="btn">
       <p className="btn-text">{props.text}</p>
@@ -8,4 +9,4 @@ const Btn = (props) => {
   );
 };
 
-export { Btn };
+export { Button };
