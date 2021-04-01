@@ -204,17 +204,6 @@ body {
   height: 20px;
 }
 
-.btn {
-  width: 110px;
-  height: 40px;
-  font-size: 14px;
-  background: #cef9c6;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .task-list__wrapper {
   max-height: auto;
   display: flex;
