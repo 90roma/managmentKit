@@ -105,19 +105,9 @@ body {
   margin-right: 40px;
 }
 
-.followers-avatar {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-}
-
 .task-opened-box__asign {
   display: flex;
   align-items: center;
-}
-
-.asign-avatar_position {
-  margin: 0 5px 0 0;
 }
 
 .task__check-box {
@@ -192,16 +182,6 @@ body {
   display: flex;
   align-items: center;
   margin: 0 0 0 40px;
-}
-
-.avatar__task {
-  display: flex;
-  margin: 0 8px 0 0px;
-}
-
-.avatar {
-  width: 20px;
-  height: 20px;
 }
 
 .task-list__wrapper {

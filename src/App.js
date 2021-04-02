@@ -10,15 +10,15 @@ import { Tag } from "./Tag";
 
 import { Avatar } from "./Avatar";
 import { Picture } from "./Picture";
-import avatarAdd from "./avatar-add.png";
-import avatarDev from "./avatar-dev.png";
-import avatarDes from "./avatar-des.png";
-import avatarDes2 from "./avatar-des2.png";
-import avatarDes3 from "./avatar-des3.png";
-import avatarMark from "./avatar-mark.png";
-import avatarMark2 from "./avatar-mark2.png";
-import avatarPdf from "./avatar-pdf.png";
-import avatarRoad from "./avatar-road.png";
+import avatarAdd from "./Avatar/avatar-add.png";
+import avatarDev from "./Avatar/avatar-dev.png";
+import avatarDes from "./Avatar/avatar-des.png";
+import avatarDes2 from "./Avatar/avatar-des2.png";
+import avatarDes3 from "./Avatar/avatar-des3.png";
+import avatarMark from "./Avatar/avatar-mark.png";
+import avatarMark2 from "./Avatar/avatar-mark2.png";
+import avatarPdf from "./Avatar/avatar-pdf.png";
+import avatarRoad from "./Avatar/avatar-road.png";
 
 export default function App() {
   return (
