@@ -1,0 +1,19 @@
+.avatar {
+    width: 20px;
+    height: 20px;
+}
+
+.avatar__task {
+    display: flex;
+    margin: 0 8px 0 0px;
+}
+
+.asign-avatar_position {
+    margin: 0 5px 0 0;
+}
+
+.followers-avatar {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
