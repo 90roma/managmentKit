@@ -1,10 +1,23 @@
-.btn {
-    width: 110px;
+.Button {
     height: 40px;
     font-size: 14px;
-    background: #cef9c6;
+    background: #EAEAEA;
+    color: #131313;
+    border:none;
     border-radius: 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.Button_warning {
+    background: #FFF8DD;
+    color: #FFC200;
+}
+
+.Button_success {
+    background: #cef9c6;
 }
