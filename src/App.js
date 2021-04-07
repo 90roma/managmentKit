@@ -1,15 +1,15 @@
 import "./styles.css";
-import { TaskCard } from "./TaskCard";
-import { Title } from "./Title";
+import { TaskCard } from "./TaskLists/TaskCard";
+import { Title } from "./TaskLists/Title";
 import { Button } from "./Button";
-import { BtnMore } from "./BtnMore";
-import { CheckBoxBig } from "./CheckBoxBig";
-import { HeaderUp } from "./HeaderUp";
-import { TaskText } from "./TaskText";
-import { Tag } from "./Tag";
+import { BtnMore } from "./Button/BtnMore";
+import { CheckBox } from "./CheckBox";
+import { HeaderUp } from "./TaskLists/HeaderUp";
+import { TaskText } from "./TaskLists/TaskText";
+import { Tag } from "./TaskLists/Tag";
 
 import { Avatar } from "./Avatar";
-import { Picture } from "./Picture";
+import { Picture } from "./Picture/Picture";
 import avatarAdd from "./Avatar/avatar-add.png";
 import avatarDev from "./Avatar/avatar-dev.png";
 import avatarDes from "./Avatar/avatar-des.png";
@@ -26,7 +26,10 @@ export default function App() {
       <div className="task-list__container">
         <div className="task-list__wrapper task-list__wrapper__title-position">
           <Title title="Backlog" />
-          <Button text="+ Add task" />
+          <Button
+              text="+ Add task"
+              type="success"
+          />
         </div>
         <div className="task-list__wrapper">
           <TaskCard
@@ -34,6 +37,7 @@ export default function App() {
             tag="development"
             avatarUrl={avatarDev}
             isDone
+            checkBoxCard
           />
         </div>
         <div className="task-list__wrapper">
@@ -42,6 +46,7 @@ export default function App() {
             tag="marketing"
             avatarUrl={avatarMark}
             isDone={false}
+            checkBoxCard
           />
         </div>
         <div className="task-list__wrapper">
@@ -50,11 +55,12 @@ export default function App() {
             tag="design"
             avatarUrl={avatarDes}
             isDone={false}
+            checkBoxCard
           />
         </div>
         <div className="task-list__wrapper task-list__wrapper__todo-position">
           <Title title="To Do" />
-          <Button text="+ Add task" />
+          <Button text="+ Add task" type="success"/>
         </div>
         <div className="task-list__wrapper">
           <TaskCard
@@ -62,6 +68,8 @@ export default function App() {
             tag="design"
             avatarUrl={avatarDes2}
             isDone={false}
+            checkBoxCard
+
           />
         </div>
         <div className="task-list__wrapper">
@@ -70,6 +78,7 @@ export default function App() {
             tag="marketing"
             avatarUrl={avatarMark2}
             isDone={false}
+            checkBoxCard
           />
         </div>
         <div className="task-list__wrapper">
@@ -78,6 +87,7 @@ export default function App() {
             tag="design"
             avatarUrl={avatarDes3}
             isDone={false}
+            checkBoxCard
           />
         </div>
       </div>
@@ -89,7 +99,10 @@ export default function App() {
               subtitle="Added by Kristin A. yesterday at 12:41pm"
             />
             <div className="list-opened__btn-position">
-              <CheckBoxBig />
+              <CheckBox
+                  checkBoxCard={false}
+                  isDone={false}
+              />
               <BtnMore />
             </div>
           </div>
