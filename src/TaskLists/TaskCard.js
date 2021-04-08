@@ -1,27 +1,30 @@
 import React from "react"
 import "./style.css";
-import { TaskText } from "./TaskText";
 import { CheckBox } from "../CheckBox";
 import { Tag } from "./Tag";
 import { Avatar } from "../Avatar";
+import {Title} from "../Title";
 
 const TaskCard = (props) => {
-    // const checkBoxClass = () => {
-    //
-    // }
+    const cardClass = (selected) => {
+        switch (selected) {
+            case true:
+                return "card card__wrapper card__wrapper_selected";
+            default:
+                return "card card__wrapper";
+        }
+    }
   return (
-    <div className="task-box">
-      <div className="title-wrapper">
-        <CheckBox value={props.isDone} task={props.checkBoxCard} />
-        <TaskText text={props.title} />
-      </div>
-      <div className="department-wrapper">
-        <div className="avatar__task">
-          <Avatar url={props.avatarUrl} />
+      <div className={cardClass(props.selected)}>
+        <div className="card__heading-wrapper">
+            <CheckBox className="CheckBox" value={props.isDone} task={props.checkBoxCard} />
+            <Title header={props.header}/>
         </div>
-        <Tag name={props.tag} />
+        <div className="card__department-wrapper">
+            <Avatar url={props.avatarUrl}/>
+            <Tag name={props.tag} />
+        </div>
       </div>
-    </div>
   );
 };
 

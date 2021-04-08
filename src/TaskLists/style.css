@@ -1,15 +1,56 @@
+.task-list {
+    border-radius: 8px;
+    background: #fff;
+}
+
+.task-list__container {
+    padding: 0 30px 20px 30px;
+}
+
+.card {
+    max-width: 345px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #f7f6f3;
+    border-radius: 10px;
+}
+
+.card__wrapper {
+    margin: 0 0 10px 0;
+}
+
+.card__wrapper_selected {
+    background: #FFF8DD;
+}
+
+.card-header {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.text {
+    color: #131313;
+}
 .task__text {
     font-size: 18px;
 }
 
-.task__text-asign {
+.task-list-opened__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
 }
 
-.task-opened-box_text {
+.block-info__text {
+    line-height: 20px;
     font-weight: 400;
+}
+
+.block-info__asign {
+    display: flex;
+    align-items: center;
 }
 
 .description-text_position {
@@ -31,22 +72,6 @@
 
 .description_text-delete-picture {
     color: red;
-}
-
-.task-list__wrapper__title-position {
-    margin: 0 0 20px 0;
-}
-
-.subtitle {
-    margin: 6px 0 0 0;
-    line-height: 24px;
-    font-weight: 400;
-}
-
-.header-uppercase {
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
 .Tag {
@@ -79,31 +104,30 @@
     background: #e3efff;
 }
 
-.task-list__container {
+
+
+.task-list-opened {
+    max-width: 636px;
     padding: 30px 30px 10px 30px;
     border-radius: 8px;
     background: #fff;
 }
 
 .task-list-opened__container {
-    max-width: 636px;
-    padding: 30px 30px 10px 30px;
     margin: 0 0 0 30px;
-    border-radius: 8px;
-    background: #fff;
 }
 
-.task-list-opened__header {
+.task-list-opened__header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.task-list-opened__assign-wrapper {
+.block-info {
     display: flex;
 }
 
-.task-list-opened__assign-wrapper_position {
+.task-list-opened__block-info {
     padding: 0 0 30px 0;
     margin: 30px 0 0 0;
     border-bottom: 1px solid #ececec;
@@ -118,44 +142,43 @@
     display: flex;
     justify-content: space-between;
 }
-
-.task-box {
-    max-width: 385px;
-    padding: 20px;
-    margin: 0 0 10px 0;
+.task-list-opened__btn-position {
+    min-width: 100px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
-    background-color: #f7f6f3;
-    border-radius: 10px;
 }
+
 
 .task-box_active {
     background-color: #fff8dd;
 }
 
-.task-opened-box {
+.block-info__group {
     min-height: 50px;
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.task-opened-box__asign {
-    display: flex;
-    align-items: center;
-}
-
-.task-list__wrapper {
+.title-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.task-list__wrapper__todo-position {
-    margin: 20px 0;
+    margin: 30px 0 20px 0;
 }
 
 .task-list-opened__description-wrapper_position {
     margin: 30px 0 0 0;
+}
+
+.card__department-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 40px;
+}
+
+.card__heading-wrapper {
+    margin: 0 0 8px 0;
+    display: flex;
 }

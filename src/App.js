@@ -1,11 +1,8 @@
 import "./styles.css";
 import { TaskCard } from "./TaskLists/TaskCard";
-import { Title } from "./TaskLists/Title";
+import { Title } from "./Title";
 import { Button } from "./Button";
-import { BtnMore } from "./Button/BtnMore";
 import { CheckBox } from "./CheckBox";
-import { HeaderUp } from "./TaskLists/HeaderUp";
-import { TaskText } from "./TaskLists/TaskText";
 import { Tag } from "./TaskLists/Tag";
 
 import { Avatar } from "./Avatar";
@@ -23,114 +20,102 @@ import avatarRoad from "./Avatar/avatar-road.png";
 export default function App() {
   return (
     <div className="App">
-      <div className="task-list__container">
-        <div className="task-list__wrapper task-list__wrapper__title-position">
+      <div className="task-list task-list__container">
+        <div className="title-wrapper">
           <Title title="Backlog" />
           <Button
               text="+ Add task"
               type="success"
           />
         </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="E-mail after registration so that I can confirm my address"
+            header="E-mail after registration so that I can confirm my address"
             tag="development"
             avatarUrl={avatarDev}
             isDone
             checkBoxCard
+            selected={false}
           />
-        </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="Find top 5 customers and get reviews from them"
+            header="Find top 5 customers and get reviews from them"
             tag="marketing"
             avatarUrl={avatarMark}
             isDone={false}
             checkBoxCard
+            selected
           />
-        </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="Two-factor authentication to make my private data more secure "
+            header="Two-factor authentication to make my private data more secure "
             tag="design"
             avatarUrl={avatarDes}
             isDone={false}
             checkBoxCard
+            selected={false}
           />
-        </div>
-        <div className="task-list__wrapper task-list__wrapper__todo-position">
+        <div className="title-wrapper">
           <Title title="To Do" />
           <Button text="+ Add task" type="success"/>
         </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="An option to search in current projects or in all projects"
+            header="An option to search in current projects or in all projects"
             tag="design"
             avatarUrl={avatarDes2}
             isDone={false}
             checkBoxCard
-
+            selected={false}
           />
-        </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="Account for teams and personal in bottom style"
+            header="Account for teams and personal in bottom style"
             tag="marketing"
             avatarUrl={avatarMark2}
             isDone={false}
             checkBoxCard
+            selected={false}
           />
-        </div>
-        <div className="task-list__wrapper">
           <TaskCard
-            title="Listing on Product Hunt so that we can reach as many potential users"
+            header="Listing on Product Hunt so that we can reach as many potential users"
             tag="design"
             avatarUrl={avatarDes3}
             isDone={false}
             checkBoxCard
+            selected={false}
           />
-        </div>
       </div>
-      <div className="task-list-opened__container">
+      <div className="task-list-opened task-list-opened__container">
         <div className="task-list-opened__wrapper">
-          <div className="task-list-opened__header">
+          <div className="task-list-opened__header-wrapper">
             <Title
               title="Find top 5 customer requests"
               subtitle="Added by Kristin A. yesterday at 12:41pm"
             />
-            <div className="list-opened__btn-position">
+            <div className="task-list-opened__btn-position">
               <CheckBox
                   checkBoxCard={false}
                   isDone={false}
               />
-              <BtnMore />
+              {/*<BtnMore />*/}
+              <Button/>
             </div>
           </div>
-          <div className="task-list-opened__assign-wrapper task-list-opened__assign-wrapper_position">
-            <div className="task-opened-box asign-to">
-              <HeaderUp title="asign to" />
-              <div className="task-opened-box__asign">
-                <div className="asign-avatar_position">
+          <div className="block-info task-list-opened__block-info">
+            <div className="block-info__group">
+              <Title headingUppercase="Asign To"/>
+              <div className="block-info__asign">
                   <Avatar url={avatarDev} />
-                </div>
-                <div className="task-opened-box_text">
-                  <TaskText textAsign="Linzell Bowman" />
-                </div>
+                  <p className="text block-info__text">Linzell Bowman</p>
               </div>
             </div>
-            <div className="task-opened-box due-on">
-              <HeaderUp title="due on" />
-              <div className="task-opened-box_text">
-                <TaskText textAsign="Tue, Dec 25" />
-              </div>
+            <div className="block-info__group">
+              <Title headingUppercase = "due on"/>
+                <p className="text block-info__text">Tue, Dec 25</p>
             </div>
-            <div className="task-opened-box tag">
-              <HeaderUp title="tag" />
+            <div className="block-info__group">
+              <Title headingUppercase = "tag"/>
               <Tag name="marketing" />
             </div>
-            <div className="task-opened-box followers">
-              <HeaderUp title="followers" />
-              <div className="followers-avatar">
+            <div className="block-info__group">
+              <Title headingUppercase="followers" />
+              <div className="block-info__followers-avatar">
                 <Avatar url={avatarDev} />
                 <Avatar url={avatarDes} />
                 <Avatar url={avatarMark} />
@@ -139,48 +124,45 @@ export default function App() {
             </div>
           </div>
           <div className="task-list-opened__description-wrapper task-list-opened__description-wrapper_position">
-            <HeaderUp title="description" />
+            <Title headingUppercase="description" />
             <div className="description-text_position">
-              <div className="task__text-asign">
-                <TaskText
-                  textAsign="Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.
-  "
-                />
+              <div className="task-list-opened__text">
+                <p >Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.</p>
               </div>
             </div>
-            <div className="description-picture__container">
-              <div className="description-picture__wrapper description-picture__wrapper_position">
-                <div className="description-picture_position">
+            <div className="document-info__container">
+              <div className="document-info document-info__wrapper">
+                <div className="document-info__picture">
                   <Picture url={avatarPdf} />
                 </div>
                 <div className="description-picture_text-position">
                   <div className="description-picture_text-header">
-                    <TaskText textAsign="Redesign Brief 2019.pdf" />
+                    <p>Redesign Brief 2019.pdf</p>
                   </div>
                   <div className="description_text-body">
                     <div className="description_text-size-picture description_text-size-picture_position">
-                      <TaskText textAsign="159 KB" />
+                      <p>159 KB</p>
                     </div>
                     <div className="description_text-delete-picture">
-                      <TaskText textAsign="Delete" />
+                      <p>Delete</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="description-picture__wrapper description-picture__wrapper_position">
-                <div className="description-picture_position">
+              <div className="document-info document-info__wrapper">
+                <div className="document-info__picture">
                   <Picture url={avatarRoad} />
                 </div>
                 <div className="description-picture_text-position">
                   <div className="description-picture_text-header">
-                    <TaskText textAsign="Header.png" />
+                    <p>Header.png</p>
                   </div>
                   <div className="description_text-body">
                     <div className="description_text-size-picture description_text-size-picture_position">
-                      <TaskText textAsign="129 KB" />
+                      <p>129 KB</p>
                     </div>
                     <div className="description_text-delete-picture">
-                      <TaskText textAsign="Delete" />
+                      <p>Delete</p>
                     </div>
                   </div>
                 </div>
