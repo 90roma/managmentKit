@@ -2,7 +2,6 @@ import React from "react";
 import './style.css'
 
 const getClass = (type) => {
-    // console.log(type)
     switch (type) {
         case "warning":
             return "Button Button_warning";
@@ -14,11 +13,12 @@ const getClass = (type) => {
 }
 
 const Button = (props) => {
-    // console.log('button props', props.type);
   return (
-    <button className={getClass(props.type)}>
-        {props.text}
-    </button>
+    <div>
+        <button className={getClass(props.type)}>
+            {props.text}
+        </button>
+    </div>
   );
 };
 

@@ -1,0 +1,19 @@
+.header-uppercase {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin: 6px 0 0 0;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.task-list__wrapper__title-position {
+    margin: 0 0 20px 0;
+}
+
+.text {
+    color: #131313;
+}
