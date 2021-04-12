@@ -1,7 +1,8 @@
 import React from "react";
 import './style.css';
 
-const CheckBox = (props) => {
+const CheckBox = ({value, checkBoxCard}) => {
+
   const checkBoxClassTask = (value) => {
     switch (value) {
       case true:
@@ -19,8 +20,8 @@ const CheckBox = (props) => {
   }
     return (
         <div>
-          <div className={checkBoxClassTask(props.value)}/>
-          <div className={checkBoxClass(props.checkBoxCard)}/>
+          <div className={checkBoxClassTask(value)}/>
+          <div className={checkBoxClass(checkBoxCard)}/>
         </div>
     );
 }

@@ -1,11 +1,12 @@
 import React from "react"
 import "./style.css";
 import { CheckBox } from "../CheckBox";
-import { Tag } from "./Tag";
+import { Tag } from "../Tag";
 import { Avatar } from "../Avatar";
 import {Title} from "../Title";
 
-const TaskCard = (props) => {
+const TaskCard = ({selected, isDone, checkBoxCard, header, avatarUrl, tag}) => {
+
     const cardClass = (selected) => {
         switch (selected) {
             case true:
@@ -15,14 +16,14 @@ const TaskCard = (props) => {
         }
     }
   return (
-      <div className={cardClass(props.selected)}>
+      <div className={cardClass(selected)}>
         <div className="card__heading-wrapper">
-            <CheckBox className="CheckBox" value={props.isDone} task={props.checkBoxCard} />
-            <Title header={props.header}/>
+            <CheckBox className="CheckBox" value={isDone} task={checkBoxCard} />
+            <Title header={header}/>
         </div>
         <div className="card__department-wrapper">
-            <Avatar url={props.avatarUrl}/>
-            <Tag name={props.tag} />
+            <Avatar url={avatarUrl}/>
+            <Tag name={tag} />
         </div>
       </div>
   );

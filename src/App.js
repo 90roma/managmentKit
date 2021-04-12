@@ -3,7 +3,7 @@ import { TaskCard } from "./TaskLists/TaskCard";
 import { Title } from "./Title";
 import { Button } from "./Button";
 import { CheckBox } from "./CheckBox";
-import { Tag } from "./TaskLists/Tag";
+import { Tag } from "./Tag";
 
 import { Avatar } from "./Avatar";
 import { Picture } from "./Picture/Picture";
@@ -93,7 +93,6 @@ export default function App() {
                   checkBoxCard={false}
                   isDone={false}
               />
-              {/*<BtnMore />*/}
               <Button/>
             </div>
           </div>
