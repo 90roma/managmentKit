@@ -1,3 +1,4 @@
+import React,{ useState } from 'react'
 import "./styles.css";
 import { TaskCard } from "./TaskCard/TaskCard";
 import { Title } from "./Title";
@@ -18,6 +19,14 @@ import avatarPdf from "./Avatar/avatar-pdf.png";
 import avatarRoad from "./Avatar/avatar-road.png";
 
 export default function App() {
+  const [taskName, setTaskName] = useState("Find top 5 customer requests")
+  const [isEditMode, setEditMode] = useState(false)
+
+  const handleTaskTitle = (event) => {
+    // смена состояния на основе change события
+    setTaskName(event.target.value)
+  }
+
   return (
     <div className="App">
       <div className="task task__container">
@@ -84,9 +93,15 @@ export default function App() {
       <div className="full-task full-task__container">
           <div className="full-task__header-wrapper">
             <Title
-              title="Find top 5 customer requests"
+              title={taskName}
               subtitle="Added by Kristin A. yesterday at 12:41pm"
             />
+
+            {isEditMode && <input value={taskName} type="text" onChange={(event) => handleTaskTitle(event)}/>}
+            <button onClick={() => {
+              setEditMode(!isEditMode)
+            }}>{isEditMode ? 'save' : 'edit'}</button>
+
             <div className="full-task__button-wrapper">
               <CheckBox
                   checkBoxCard={false}
