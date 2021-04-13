@@ -1,0 +1,29 @@
+.Tag {
+    display: flex;
+    padding: 0 10px;
+    min-height: 20px;
+    font-size: 12px;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 11px;
+}
+
+.Tag_default {
+    color: #131313;
+    background: #e5e5e5;
+}
+
+.Tag_orange {
+    color: #ed6400;
+    background: #fff1e2;
+}
+
+.Tag_purple {
+    color: #764ced;
+    background: #f5f0ff;
+}
+
+.Tag_blue {
+    color: #1975d0;
+    background: #e3efff;
+}

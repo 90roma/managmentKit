@@ -12,15 +12,14 @@ const getClass = (type) => {
     }
 }
 
-const Button = (props) => {
-  return (
-    <div>
-        <button className={getClass(props.type)}>
-            {props.text}
-        </button>
-    </div>
-  );
+const Button = ({ text, type }) => {
+    return (
+        <div>
+            <button className={getClass(type)}>
+                {text}
+            </button>
+        </div>
+    );
 };
-
 
 export { Button };

@@ -1,6 +1,7 @@
 import React from "react";
+import './style.css';
 
-const Tag = (props) => {
+const Tag = ({name}) => {
     const tagClass = (name) => {
         switch (name) {
             case "development":
@@ -14,8 +15,8 @@ const Tag = (props) => {
         }
     }
   return (
-    <div className={tagClass(props.name)}>
-      <p>{props.name}</p>
+    <div className={tagClass(name)}>
+      <p>{name}</p>
     </div>
   );
 };
