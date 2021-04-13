@@ -1,8 +1,6 @@
 import React from "react";
 import './style.css'
 
-
-
 const getClass = (type) => {
     switch (type) {
         case "warning":
@@ -23,6 +21,5 @@ const Button = ({ text, type }) => {
         </div>
     );
 };
-
 
 export { Button };

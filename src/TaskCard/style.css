@@ -1,10 +1,18 @@
-.task-list {
+.task {
     border-radius: 8px;
     background: #fff;
+    color: #131313;
 }
 
-.task-list__container {
+.task__container {
     padding: 0 30px 20px 30px;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
 }
 
 .card {
@@ -30,17 +38,14 @@
     line-height: 27px;
 }
 
-.text {
-    color: #131313;
-}
-.task__text {
-    font-size: 18px;
-}
-
-.task-list-opened__text {
+.full-description {
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
+}
+
+.full-task__full-description {
+    margin: 20px 0 0 0;
 }
 
 .block-info__text {
@@ -48,80 +53,45 @@
     font-weight: 400;
 }
 
-.block-info__asign {
+.header-info__asign {
     display: flex;
     align-items: center;
 }
 
-.description-text_position {
-    margin: 20px 0 0 0;
-}
-
-.description_text-body {
-    display: flex;
-}
-
-.description_text-size-picture {
-    font-weight: 400;
-    color: #8a8a8e;
-}
-
-.description_text-size-picture_position {
-    margin: 0 15px 0 0;
-}
-
-.description_text-delete-picture {
-    color: red;
-}
-
-.task-list-opened {
+.full-task {
     max-width: 636px;
     padding: 30px 30px 10px 30px;
     border-radius: 8px;
     background: #fff;
 }
 
-.task-list-opened__container {
+.full-task__container {
     margin: 0 0 0 30px;
 }
 
-.task-list-opened__header-wrapper {
+.full-task__header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.block-info {
+.header-info {
     display: flex;
 }
 
-.task-list-opened__block-info {
+.full-task__header-info__wrapper {
     padding: 0 0 30px 0;
     margin: 30px 0 0 0;
     border-bottom: 1px solid #ececec;
 }
 
-.task-list-opened__wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.task-list-opened__header {
-    display: flex;
-    justify-content: space-between;
-}
-.task-list-opened__btn-position {
+.full-task__button-wrapper {
     min-width: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-
-.task-box_active {
-    background-color: #fff8dd;
-}
-
-.block-info__group {
+.header-info__group {
     min-height: 50px;
     margin-right: 40px;
     display: flex;
@@ -129,14 +99,7 @@
     justify-content: space-between;
 }
 
-.title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0 20px 0;
-}
-
-.task-list-opened__description-wrapper_position {
+.full-task__description-wrapper {
     margin: 30px 0 0 0;
 }
 

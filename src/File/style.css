@@ -1,0 +1,58 @@
+
+
+.File {
+    display: flex;
+    font-size: 14px;
+    line-height: 21px;
+    /*flex-wrap: wrap;*/
+    /*align-items: center;*/
+}
+
+.File__wrapper {
+    display: flex;
+    border-bottom: 1px solid #ececec;
+    padding: 20px 0 30px 0;
+}
+
+.Preview-url {
+    align-self: flex-start;
+}
+
+.Size {
+    font-weight: 400;
+    color: #8a8a8e;
+}
+
+.File__header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.File__info {
+    display: flex;
+    flex-flow: column wrap;
+    /*justify-content: space-between;*/
+}
+
+.File__image-info {
+    display: flex;
+}
+
+.File__info_position {
+    margin: 0 30px 0 10px;
+}
+
+.Delete {
+    border: none;
+    background: none;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.File__delete {
+    margin: 0 0 0 15px;
+}

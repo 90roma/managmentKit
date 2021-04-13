@@ -1,12 +1,12 @@
 import "./styles.css";
-import { TaskCard } from "./TaskLists/TaskCard";
+import { TaskCard } from "./TaskCard/TaskCard";
 import { Title } from "./Title";
 import { Button } from "./Button";
 import { CheckBox } from "./CheckBox";
 import { Tag } from "./Tag";
 
 import { Avatar } from "./Avatar";
-import { Picture } from "./Picture/Picture";
+import { File } from "./File";
 import avatarAdd from "./Avatar/avatar-add.png";
 import avatarDev from "./Avatar/avatar-dev.png";
 import avatarDes from "./Avatar/avatar-des.png";
@@ -20,7 +20,7 @@ import avatarRoad from "./Avatar/avatar-road.png";
 export default function App() {
   return (
     <div className="App">
-      <div className="task-list task-list__container">
+      <div className="task task__container">
         <div className="title-wrapper">
           <Title title="Backlog" />
           <Button
@@ -81,14 +81,13 @@ export default function App() {
             selected={false}
           />
       </div>
-      <div className="task-list-opened task-list-opened__container">
-        <div className="task-list-opened__wrapper">
-          <div className="task-list-opened__header-wrapper">
+      <div className="full-task full-task__container">
+          <div className="full-task__header-wrapper">
             <Title
               title="Find top 5 customer requests"
               subtitle="Added by Kristin A. yesterday at 12:41pm"
             />
-            <div className="task-list-opened__btn-position">
+            <div className="full-task__button-wrapper">
               <CheckBox
                   checkBoxCard={false}
                   isDone={false}
@@ -96,25 +95,25 @@ export default function App() {
               <Button/>
             </div>
           </div>
-          <div className="block-info task-list-opened__block-info">
-            <div className="block-info__group">
+          <div className="header-info full-task__header-info__wrapper">
+            <div className="header-info__group">
               <Title headingUppercase="Asign To"/>
-              <div className="block-info__asign">
+              <div className="header-info__asign">
                   <Avatar url={avatarDev} />
                   <p className="text block-info__text">Linzell Bowman</p>
               </div>
             </div>
-            <div className="block-info__group">
+            <div className="header-info__group">
               <Title headingUppercase = "due on"/>
                 <p className="text block-info__text">Tue, Dec 25</p>
             </div>
-            <div className="block-info__group">
+            <div className="header-info__group">
               <Title headingUppercase = "tag"/>
               <Tag name="marketing" />
             </div>
-            <div className="block-info__group">
+            <div className="header-info__group">
               <Title headingUppercase="followers" />
-              <div className="block-info__followers-avatar">
+              <div className="header-info__followers-avatar">
                 <Avatar url={avatarDev} />
                 <Avatar url={avatarDes} />
                 <Avatar url={avatarMark} />
@@ -122,53 +121,24 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="task-list-opened__description-wrapper task-list-opened__description-wrapper_position">
+          <div className="full-task__description-wrapper">
             <Title headingUppercase="description" />
-            <div className="description-text_position">
-              <div className="task-list-opened__text">
-                <p >Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.</p>
-              </div>
-            </div>
-            <div className="document-info__container">
-              <div className="document-info document-info__wrapper">
-                <div className="document-info__picture">
-                  <Picture url={avatarPdf} />
-                </div>
-                <div className="description-picture_text-position">
-                  <div className="description-picture_text-header">
-                    <p>Redesign Brief 2019.pdf</p>
-                  </div>
-                  <div className="description_text-body">
-                    <div className="description_text-size-picture description_text-size-picture_position">
-                      <p>159 KB</p>
-                    </div>
-                    <div className="description_text-delete-picture">
-                      <p>Delete</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="document-info document-info__wrapper">
-                <div className="document-info__picture">
-                  <Picture url={avatarRoad} />
-                </div>
-                <div className="description-picture_text-position">
-                  <div className="description-picture_text-header">
-                    <p>Header.png</p>
-                  </div>
-                  <div className="description_text-body">
-                    <div className="description_text-size-picture description_text-size-picture_position">
-                      <p>129 KB</p>
-                    </div>
-                    <div className="description_text-delete-picture">
-                      <p>Delete</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p className="full-description full-task__full-description">Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.</p>
+            <div className="File__wrapper">
+              <File
+                url={avatarPdf}
+                fileHeader="Redesign Brief 2019.pdf"
+                size="159 KB"
+                buttonDelete="Delete"
+              />
+              <File
+                url={avatarRoad}
+                fileHeader="Header.png"
+                size="129 KB"
+                buttonDelete="Delete"
+              />
             </div>
           </div>
-        </div>
       </div>
     </div>
   );

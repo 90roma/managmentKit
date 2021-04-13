@@ -7,11 +7,7 @@
     margin: 0 8px 0 0px;
 }
 
-/*.asign-avatar_position {*/
-/*    margin: 0 5px 0 0;*/
-/*}*/
-
-.block-info__followers-avatar {
+.header-info__followers-avatar {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
