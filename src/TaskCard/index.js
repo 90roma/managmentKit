@@ -1,24 +1,29 @@
-import React from "react"
+import React,{ useState } from "react"
 import "./style.css";
 import { CheckBox } from "../CheckBox";
 import { Tag } from "../Tag";
 import { Avatar } from "../Avatar";
 import {Title} from "../Title";
 
-const TaskCard = ({selected, isDone, checkBoxCard, header, avatarUrl, tag}) => {
+const TaskCard = ({checkBoxCard, header, avatarUrl, tag}) => {
+    const [isState, setIsState] = useState(false)
+    const [isSelect, setIsSelect] = useState(false)
 
-    const cardClass = (selected) => {
-        switch (selected) {
+    const cardClass = (isSelect) => {
+        switch (isSelect) {
             case true:
                 return "card card__wrapper card__wrapper_selected";
             default:
                 return "card card__wrapper";
         }
     }
+
   return (
-      <div className={cardClass(selected)}>
+      <div onClick={ () => setIsSelect (!isSelect) } className={cardClass(isSelect)}>
         <div className="card__heading-wrapper">
-            <CheckBox className="CheckBox" value={isDone} task={checkBoxCard} />
+            <div onClick={ ()=> setIsState(!isState) }>
+                <CheckBox className="CheckBox" value={isState} task={checkBoxCard} />
+            </div>
             <Title header={header}/>
         </div>
         <div className="card__department-wrapper">
