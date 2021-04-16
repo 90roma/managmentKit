@@ -1,0 +1,15 @@
+.Task-list {
+    max-width: 636px;
+    border-radius: 8px;
+    background: #fff;
+    color: #131313;
+    padding: 0 30px 20px 30px;
+    margin: 0 30px 0 0;
+}
+
+.Task-list__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}

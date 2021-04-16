@@ -1,15 +1,15 @@
 import React from "react";
 import './style.css';
 
-const File = ({ url, size, fileHeader, buttonDelete}) => {
+const File = ({ url, size, fileName}) => {
   return (
       <div className="File">
-        <img className="Preview-url" src={url} alt="this picture" />
-          <div className="File__info File__info_position">
-              <p className="File__header">{fileHeader}</p>
-              <div className="File__image-info">
-                <p className="Size">{size}</p>
-                <button className="Delete File__delete">{buttonDelete}</button>
+        <img className="File__preview-url" src={url} alt="this picture" />
+          <div className="File__info">
+              <p className="File__name">{fileName}</p>
+              <div className="File__info-text-wrapper">
+                <p className="File__size">{size}</p>
+                <button className="File__delete">Delete</button>
               </div>
           </div>
       </div>

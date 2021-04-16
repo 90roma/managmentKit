@@ -1,29 +1,25 @@
-
-
 .File {
     display: flex;
     font-size: 14px;
     line-height: 21px;
-    /*flex-wrap: wrap;*/
-    /*align-items: center;*/
 }
 
-.File__wrapper {
+.file__wrapper {
     display: flex;
     border-bottom: 1px solid #ececec;
     padding: 20px 0 30px 0;
 }
 
-.Preview-url {
+.File__preview-url {
     align-self: flex-start;
 }
 
-.Size {
+.File__size {
     font-weight: 400;
     color: #8a8a8e;
 }
 
-.File__header {
+.File__name {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -33,26 +29,19 @@
 .File__info {
     display: flex;
     flex-flow: column wrap;
-    /*justify-content: space-between;*/
-}
-
-.File__image-info {
-    display: flex;
-}
-
-.File__info_position {
     margin: 0 30px 0 10px;
 }
 
-.Delete {
+.File__info-text-wrapper {
+    display: flex;
+}
+
+.File__delete {
     border: none;
     background: none;
     color: red;
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
-}
-
-.File__delete {
     margin: 0 0 0 15px;
 }
