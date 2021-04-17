@@ -14,8 +14,8 @@ import {File} from "../File";
 import avatarPdf from "../Avatar/avatar-pdf.png";
 import avatarRoad from "../Avatar/avatar-road.png";
 
-const Task = () => {
-    const [descriptionText, setDescriptionText] = useState('Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.');
+const Task = ({title, subtitle}) => {
+    const [descriptionText, setDescriptionText] = useState("Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.");
     const [isEditMode, setEditMode] = useState(false);
     const handleDescriptionText = (event) => setDescriptionText(event.target.value);
 
@@ -25,15 +25,14 @@ const Task = () => {
         <div className="Task">
             <div className="Task__container">
                 <div className="Task__title-wrapper">
-                    <Title
-                        title="Find top 5 customer requests"
-                        subtitle="Added by Kristin A. yesterday at 12:41pm"
-                    />
+                    <div>
+                        <h2>{title}</h2>
+                        <p className="text subtitle">{subtitle}</p>
+                    </div>
                     <div className="Task__button-wrapper">
                         <div onClick={ () => setIsState(!isState)}>
                             <CheckBox checkBoxCard={isState}/>
                         </div>
-
                         <Button/>
                     </div>
                 </div>
@@ -68,7 +67,7 @@ const Task = () => {
                     <p className="Task__text"> { descriptionText } </p>
                     { isEditMode && <textarea value={descriptionText} onChange={(event)=> handleDescriptionText(event)}/> }
                     <button onClick={ ()=> setEditMode(!isEditMode) }> {isEditMode ? 'save' : 'edit'} </button>
-                    <div className="file__wrapper">
+                    <div className="File__wrapper">
                         <File
                             url={avatarPdf}
                             fileName="Redesign Brief 2019.pdf"

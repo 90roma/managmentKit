@@ -15,10 +15,8 @@ const Tag = ({name}) => {
         }
     }
   return (
-      <div>
-          <div className={tagClass(name)}>
-              <p>{name}</p>
-          </div>
+      <div className={tagClass(name)}>
+          <p>{name}</p>
       </div>
   );
 };

@@ -14,11 +14,9 @@ const getClass = (type) => {
 
 const Button = ({ text, type }) => {
     return (
-        <div>
-            <button className={getClass(type)}>
-                {text}
-            </button>
-        </div>
+        <button className={getClass(type)}>
+            {text}
+        </button>
     );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-const Title = ({ title, headingUppercase, subtitle, header}) => {
+const Title = ({ title, headingUppercase, subtitle, header }) => {
   return (
     <div>
         {Boolean(title) && <h2>{title}</h2>}
