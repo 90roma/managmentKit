@@ -6,7 +6,10 @@ export default function App() {
   return (
     <div className="App">
         <TaskList/>
-        <Task/>
+        <Task
+            title= "Find top 5 customer requests"
+            subtitle="subtitle"
+        />
     </div>
   );
 }
