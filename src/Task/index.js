@@ -4,8 +4,6 @@ import './style.css';
 import {Title} from "../Title";
 import {Button} from "../Button";
 import avatarDev from "../Avatar/avatar-dev.png";
-import avatarMark from "../Avatar/avatar-mark.png";
-import avatarDes from "../Avatar/avatar-des.png";
 import {CheckBox} from "../CheckBox";
 import {Avatar} from "../Avatar";
 import {Tag} from "../Tag";
@@ -14,24 +12,18 @@ import {File} from "../File";
 import avatarPdf from "../Avatar/avatar-pdf.png";
 import avatarRoad from "../Avatar/avatar-road.png";
 
-const Task = ({title, subtitle}) => {
-    const [descriptionText, setDescriptionText] = useState("Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.");
-    const [isEditMode, setEditMode] = useState(false);
-    const handleDescriptionText = (event) => setDescriptionText(event.target.value);
-
-    const [isState, setIsState] = useState(false)
-
+const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, description}) => {
     return (
         <div className="Task">
             <div className="Task__container">
                 <div className="Task__title-wrapper">
                     <div>
                         <h2>{title}</h2>
-                        <p className="text subtitle">{subtitle}</p>
+                        <p className="text subtitle">{`Added by ${author} ${createdAt}`}</p>
                     </div>
                     <div className="Task__button-wrapper">
-                        <div onClick={ () => setIsState(!isState)}>
-                            <CheckBox checkBoxCard={isState}/>
+                        <div>
+                            <CheckBox checkBoxCard={false}/>
                         </div>
                         <Button/>
                     </div>
@@ -41,32 +33,28 @@ const Task = ({title, subtitle}) => {
                         <Title headingUppercase="Asign To"/>
                         <div className="Task__title-info__asign-wrapper">
                             <Avatar url={avatarDev} />
-                            <p className="Task__title-info__text">Linzell Bowman</p>
+                            <p className="Task__title-info__text">{asignTo}</p>
                         </div>
                     </div>
                     <div className="Task__title-info__wrapper">
                         <Title headingUppercase = "due on"/>
-                        <p className="Task__title-info__text">Tue, Dec 25</p>
+                        <p className="Task__title-info__text">{deadLine}</p>
                     </div>
                     <div className="Task__title-info__wrapper">
                         <Title headingUppercase = "tag"/>
-                        <Tag name="marketing"/>
+                        {tags.map((tag)=> <Tag name={tag}/>)}
                     </div>
                     <div className="Task__title-info__wrapper">
                         <Title headingUppercase="followers" />
                         <div className="Task__title-info__followers-avatar">
-                            <Avatar url={avatarDev} />
-                            <Avatar url={avatarDes} />
-                            <Avatar url={avatarMark} />
+                            { followers.map((follower)=> <Avatar url={follower} />) }
                             <button className="Task__title-info__button"><Avatar url={avatarAdd} /></button>
                         </div>
                     </div>
                 </div>
                 <div className="Task__text-wrapper">
                     <Title headingUppercase="description" />
-                    <p className="Task__text"> { descriptionText } </p>
-                    { isEditMode && <textarea value={descriptionText} onChange={(event)=> handleDescriptionText(event)}/> }
-                    <button onClick={ ()=> setEditMode(!isEditMode) }> {isEditMode ? 'save' : 'edit'} </button>
+                    <p className="Task__text"> { description } </p>
                     <div className="File__wrapper">
                         <File
                             url={avatarPdf}
