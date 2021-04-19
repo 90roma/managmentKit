@@ -17,7 +17,7 @@
     margin: 30px 0 20px 0;
 }
 
-.Task__title-info {
+.Task__info {
     display: flex;
     padding: 0 0 30px 0;
     margin: 30px 0 0 0;
@@ -31,17 +31,17 @@
     margin: 20px 0 0 0;
 }
 
-.Task__title-info__text {
+.Task__info__text {
     line-height: 20px;
     font-weight: 400;
 }
 
-.Task__title-info__asign-wrapper {
+.Task__info__asign-wrapper {
     display: flex;
     align-items: center;
 }
 
-.Task__title-info__wrapper {
+.Task__info__wrapper {
     min-height: 50px;
     margin-right: 40px;
     display: flex;
@@ -55,16 +55,20 @@
     justify-content: space-between;
 }
 
-.Task__text-wrapper {
+.Task__description {
     margin: 30px 0 0 0;
 }
 
-.Task__title-info__button {
+.Task__info__button {
     width: 20px;
     height: 20px;
     border: none;
     border-radius: 50%;
     background: none;
+}
+
+.Task__discussion {
+    padding: 30px 0;
 }
 
 
