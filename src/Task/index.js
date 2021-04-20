@@ -43,7 +43,7 @@ const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, des
                     </div>
                     <div className="Task__info__wrapper">
                         <Title headingUppercase="followers"/>
-                        <div className="Task__info__followers-avatar">
+                        <div className="Task__followers">
                             {followers.map((follower) => <Avatar url={follower} key={follower}/>)}
                             <button className="Task__info__button"><Avatar url={avatarAdd}/></button>
                         </div>
@@ -64,11 +64,11 @@ const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, des
                 <div className="Task__discussion">
                     <Title headingUppercase="discussion"/>
                     {discussion.map((dis) => <Discussion
-                            url={dis.avatar}
-                            commentName={dis.name}
-                            commentPosition={dis.position}
-                            commentDate={dis.date}
-                            commentText={dis.comment}
+                            authorAvatarUrl={dis.avatar}
+                            authorNmae={dis.name}
+                            position={dis.position}
+                            date={dis.date}
+                            comment={dis.comment}
                         />
                     )}
                 </div>
