@@ -5,11 +5,11 @@ import {Title} from "../Title";
 import {Button} from "../Button";
 import {TaskCard} from "../TaskCard";
 
-const TaskList = ({tasks, onTaskClick}) => {
+const TaskList = ({tasks, onTaskClick, title}) => {
     return (
         <div className="Task-list">
             <div className="Task-list__title-wrapper">
-                <Title title="BackLog"/>
+                <Title title={title}/>
                 <Button
                     text="+ Add task"
                     type="success"
