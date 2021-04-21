@@ -1,0 +1,49 @@
+.Discussion {
+    display: flex;
+    padding: 20px 20px 20px 39px;
+    margin: 20px 0 0 24px;
+    max-width: 551px;
+    background: #F7F6F3;
+    border-radius: 10px;
+}
+
+.Discussion__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -47px;
+}
+
+.Discussion__avatar {
+    position: relative;
+    right: 62px;
+}
+
+.Discussion__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.Discussion__position {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.Discussion__date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #575756;
+    margin-left: auto;
+}
+
+.Discussion__comment-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}

@@ -1,88 +1,80 @@
-import React, { useState } from "react";
-import './style.css';
-
+import React from "react";
 import {Title} from "../Title";
 import {Button} from "../Button";
-import avatarDev from "../Avatar/avatar-dev.png";
-import avatarMark from "../Avatar/avatar-mark.png";
-import avatarDes from "../Avatar/avatar-des.png";
 import {CheckBox} from "../CheckBox";
 import {Avatar} from "../Avatar";
 import {Tag} from "../Tag";
-import avatarAdd from "../Avatar/avatar-add.png";
 import {File} from "../File";
-import avatarPdf from "../Avatar/avatar-pdf.png";
-import avatarRoad from "../Avatar/avatar-road.png";
+import {Discussion} from "../Discussion";
+import avatarAdd from "../Avatar/avatar-add.png";
+import './style.css';
 
-const Task = ({title, subtitle}) => {
-    const [descriptionText, setDescriptionText] = useState("Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.");
-    const [isEditMode, setEditMode] = useState(false);
-    const handleDescriptionText = (event) => setDescriptionText(event.target.value);
-
-    const [isState, setIsState] = useState(false)
-
+const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, description, discussion, avatar, files}) => {
     return (
         <div className="Task">
             <div className="Task__container">
                 <div className="Task__title-wrapper">
                     <div>
                         <h2>{title}</h2>
-                        <p className="text subtitle">{subtitle}</p>
+                        <p className="text subtitle">{`Added by ${author} ${createdAt}`}</p>
                     </div>
                     <div className="Task__button-wrapper">
-                        <div onClick={ () => setIsState(!isState)}>
-                            <CheckBox checkBoxCard={isState}/>
+                        <div>
+                            <CheckBox checkBoxCard={false}/>
                         </div>
                         <Button/>
                     </div>
                 </div>
-                <div className="Task__title-info">
-                    <div className="Task__title-info__wrapper">
+                <div className="Task__info">
+                    <div className="Task__info__wrapper">
                         <Title headingUppercase="Asign To"/>
-                        <div className="Task__title-info__asign-wrapper">
-                            <Avatar url={avatarDev} />
-                            <p className="Task__title-info__text">Linzell Bowman</p>
+                        <div className="Task__info__asign-wrapper">
+                            <Avatar url={avatar}/>
+                            <p className="Task__info__text">{asignTo}</p>
                         </div>
                     </div>
-                    <div className="Task__title-info__wrapper">
-                        <Title headingUppercase = "due on"/>
-                        <p className="Task__title-info__text">Tue, Dec 25</p>
+                    <div className="Task__info__wrapper">
+                        <Title headingUppercase="due on"/>
+                        <p className="Task__info__text">{deadLine}</p>
                     </div>
-                    <div className="Task__title-info__wrapper">
-                        <Title headingUppercase = "tag"/>
-                        <Tag name="marketing"/>
+                    <div className="Task__info__wrapper">
+                        <Title headingUppercase="tag"/>
+                        {tags.map((tag) => <Tag name={tag} key={tag}/>)}
                     </div>
-                    <div className="Task__title-info__wrapper">
-                        <Title headingUppercase="followers" />
-                        <div className="Task__title-info__followers-avatar">
-                            <Avatar url={avatarDev} />
-                            <Avatar url={avatarDes} />
-                            <Avatar url={avatarMark} />
-                            <button className="Task__title-info__button"><Avatar url={avatarAdd} /></button>
+                    <div className="Task__info__wrapper">
+                        <Title headingUppercase="followers"/>
+                        <div className="Task__followers">
+                            {followers.map((follower) => <Avatar url={follower} key={follower}/>)}
+                            <button className="Task__info__button"><Avatar url={avatarAdd}/></button>
                         </div>
                     </div>
                 </div>
-                <div className="Task__text-wrapper">
-                    <Title headingUppercase="description" />
-                    <p className="Task__text"> { descriptionText } </p>
-                    { isEditMode && <textarea value={descriptionText} onChange={(event)=> handleDescriptionText(event)}/> }
-                    <button onClick={ ()=> setEditMode(!isEditMode) }> {isEditMode ? 'save' : 'edit'} </button>
-                    <div className="File__wrapper">
-                        <File
-                            url={avatarPdf}
-                            fileName="Redesign Brief 2019.pdf"
-                            size="159 KB"
-                        />
-                        <File
-                            url={avatarRoad}
-                            fileName="Header.png"
-                            size="129 KB"
-                        />
+                <div className="Task__description">
+                    <Title headingUppercase="description"/>
+                    <p className="Task__text"> {description} </p>
+                    <div className="Task__file">
+                        {files.map((file) => <File
+                            url={file.filePreview}
+                            fileName={file.fileName}
+                            size={file.fileSize}
+                            type={file.fileType}
+                        />)}
                     </div>
+                </div>
+                <div className="Task__discussion">
+                    <Title headingUppercase="discussion"/>
+                    {discussion.map((dis) => <Discussion
+                            authorAvatarUrl={dis.avatar}
+                            authorNmae={dis.name}
+                            position={dis.position}
+                            date={dis.date}
+                            comment={dis.comment}
+                        />
+                    )}
                 </div>
             </div>
         </div>
     )
 }
 
-export { Task };
+export {Task};
