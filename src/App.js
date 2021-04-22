@@ -9,10 +9,19 @@ export default function App() {
 
     return (
         <div className="App">
-            <TaskList
-                tasks={TASKS}
-                onTaskClick={(task) => setOpenedTask(task)}
-            />
+            <div className="App__sidebar">
+                <TaskList
+                    tasks={TASKS}
+                    title="Backlog"
+                    onTaskClick={(task) => setOpenedTask(task)}
+                />
+                <TaskList
+                    tasks={TASKS}
+                    title="To Do"
+                    onTaskClick={(task) => setOpenedTask(task)}
+                />
+            </div>
+
             {openedTask && <Task
                 title={openedTask.title}
                 author={openedTask.author}
