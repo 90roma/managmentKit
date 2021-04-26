@@ -25,3 +25,14 @@
 .SideBarStr__icon {
     margin: 0 10px 0 0;
 }
+
+.SideBarStr__users {
+
+}
+
+.SideBarStr__user {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    cursor: pointer;
+}

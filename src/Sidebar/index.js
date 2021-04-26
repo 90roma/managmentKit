@@ -7,10 +7,10 @@ import count from '../Avatar/count.png';
 import sidebarLogo from '../Avatar/sidebar-logo.png';
 import sidebarSearch from '../Avatar/search.png';
 import userNameAvatar from "../Avatar/avatar-preview.png"
-import sideBarStrIcon from '../Avatar/sideBarStr-icon.png';
-import sideBarStrIcon1 from '../Avatar/sideBarStr-icon1.png';
-import sideBarStrIcon2 from '../Avatar/sideBarStr-icon2.png';
-import sideBarStrIcon3 from '../Avatar/sideBarStr-icon3.png';
+import sideBarStrIcon from '../Avatar/SideBarStr-Icon.png';
+import sideBarStrIcon1 from '../Avatar/SideBarStr-Icon1.png';
+import sideBarStrIcon2 from '../Avatar/SideBarStr-Icon2.png';
+import sideBarStrIcon3 from '../Avatar/SideBarStr-Icon3.png';
 import './style.css';
 
 const Sidebar = ({title}) => {
@@ -57,7 +57,7 @@ const Sidebar = ({title}) => {
                     <SidebarList
                         title="projects"
                         sidebarList={[<SideBarStr text="Design"/>,
-                            <SideBarStr text="Backend" />,
+                            <SideBarStr text="Backend" users={[userNameAvatar, userNameAvatar, userNameAvatar]} />,
                             <SideBarStr text="Frontend"/>,
                         ]}
                         button="+ Add a Team"
