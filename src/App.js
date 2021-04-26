@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {TASKS} from "./TaskList/data";
 import {Task} from "./Task";
 import {TaskList} from "./TaskList";
+import {Sidebar} from "./Sidebar";
+
 import './styles.css';
 
 export default function App() {
@@ -9,7 +11,10 @@ export default function App() {
 
     return (
         <div className="App">
-            <div className="App__sidebar">
+            <Sidebar
+                title="Projectus"
+            />
+            <div className="App__task">
                 <TaskList
                     tasks={TASKS}
                     title="Backlog"

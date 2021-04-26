@@ -1,0 +1,27 @@
+.SideBarStr {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-left: 25px;
+    border-left: 5px solid transparent;
+}
+
+.SideBarStr:hover {
+    background: #202020;
+    border-left: 5px solid #FFC200;
+}
+
+.SideBarStr__text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.SideBarStr__count {
+    margin: 0 0 0 10px;
+}
+
+.SideBarStr__icon {
+    margin: 0 10px 0 0;
+}

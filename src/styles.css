@@ -20,7 +20,7 @@ body {
   display: flex;
 }
 
-.App__sidebar {
+.App__task {
   max-width: 636px;
   border-radius: 8px;
   background: #fff;
@@ -28,4 +28,5 @@ body {
   padding: 0 30px 20px 30px;
   margin: 0 30px 0 0;
 }
+
 
