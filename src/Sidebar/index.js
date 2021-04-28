@@ -8,10 +8,10 @@ import userNameAvatar from "../Avatar/avatar-preview.png"
 import avatarDev from "../Avatar/avatar-dev.png";
 import avatarMark from "../Avatar/avatar-mark.png";
 import avatarDes from "../Avatar/avatar-des.png";
-import sideBarStrIcon from '../Avatar/sideBarStr-Icon.png';
-import sideBarStrIcon1 from '../Avatar/sideBarStr-Icon1.png';
-import sideBarStrIcon2 from '../Avatar/sideBarStr-Icon2.png';
-import sideBarStrIcon3 from '../Avatar/sideBarStr-Icon3.png';
+import sideBarStrIcon from '../Avatar/SideBarStr-Icon.png';
+import sideBarStrIcon1 from '../Avatar/SideBarStr-Icon1.png';
+import sideBarStrIcon2 from '../Avatar/SideBarStr-Icon2.png';
+import sideBarStrIcon3 from '../Avatar/SideBarStr-Icon3.png';
 import './style.css';
 
 const MENU_LIST = [{text: "Home"}, {text: "My Tasks"}, {text: "Notifications", count: 3}]
