@@ -1,4 +1,8 @@
-.SidebarList {
+.SidebarList{
+    margin-bottom: 30px;
+}
+
+.SidebarList__items {
     display: flex;
     height: 40px;
     align-items: center;
@@ -7,7 +11,7 @@
     cursor: pointer;
 }
 
-.SidebarList:hover {
+.SidebarList__items:hover {
     background: #202020;
     border-left: 5px solid #FFC200;
 }
@@ -23,15 +27,12 @@
     text-transform: uppercase;
     color: #878787;
     pointer-events:none;
-}
-
-.SidebarList__title-wrapper {
     display: flex;
     margin-left: 30px;
     height: 40px;
     align-items: center;
-    pointer-events:none;
 }
+
 
 .SidebarList__button {
     background: none;

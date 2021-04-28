@@ -22,7 +22,6 @@ const Header = ({title}) => {
                         <img className="Header__button-chat-icon" src={btnChatIcon} alt="bnt icon"/>Chat
                     </button>
                 </div>
-
             </div>
         </div>
     )

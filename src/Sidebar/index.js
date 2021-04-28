@@ -14,6 +14,16 @@ import sideBarStrIcon2 from '../Avatar/sideBarStr-Icon2.png';
 import sideBarStrIcon3 from '../Avatar/sideBarStr-Icon3.png';
 import './style.css';
 
+const MENU_LIST = [{text: "Home"}, {text: "My Tasks"}, {text: "Notifications", count: 3}]
+const PROJECTS_LIST = [{text: "Dashboard UI Kit", icon: sideBarStrIcon}, {
+    text: "CRM System",
+    icon: sideBarStrIcon1
+}, {text: "Website Redesign", icon: sideBarStrIcon2}]
+const TEAMS_LIST = [{text: "Design", users: [avatarDev, avatarMark]}, {
+    text: "Backend",
+    users: [avatarDev, avatarMark]
+}, {text: "Frontend", users: [avatarDev, avatarMark]}]
+
 const Sidebar = ({title}) => {
     return (
         <div className="Sidebar">
@@ -39,45 +49,25 @@ const Sidebar = ({title}) => {
                     />
                 </div>
                 <div className="Sidebar__sidebar-list">
-                    <div className="Sidebar__sidebar-list__wrapper">
-                        <SidebarList title="Menu"
-                                     text="Home"/>
-                        <SidebarList text="My Tasks"/>
-                        <SidebarList text="Notification" count="3"/>
-                    </div>
-                    <div className="Sidebar__sidebar-list__wrapper">
-                        <SidebarList title="projects"
-                                     text="Dashboard UI Kit"
-                                     icon={sideBarStrIcon}
-                        />
-                        <SidebarList text="CRM System"
-                                     icon={sideBarStrIcon1}
-                        />
-                        <SidebarList text="Website Redesign"
-                                     icon={sideBarStrIcon2}
-                        />
-                        <SidebarList text="Communication Tool"
-                                     icon={sideBarStrIcon3}
-                                     button="+ Add a Project"
-                        />
-                    </div>
-                    <div className="Sidebar__sidebar-list__wrapper">
-                        <SidebarList title="projects"
-                                     text="Design"
-                                     users={[avatarDes, avatarDev, avatarDes]}
-                        />
-                        <SidebarList text="Backend"
-                                     users={[avatarDev, avatarMark]}
-                        />
-                        <SidebarList text="Frontend"
-                                     users={[avatarDev, avatarMark, avatarDes, avatarDev]}
-                                     button="+ Add a Team"/>
-                        />
-                    </div>
+                    <SidebarList
+                        title="Menu"
+                        list={MENU_LIST}
+                    />
+                    <SidebarList
+                        title="Projects"
+                        list={PROJECTS_LIST}
+                        buttonText="+ Add a Project"
+                    />
+                    <SidebarList
+                        title="teams"
+                        list={TEAMS_LIST}
+                        buttonText="+ Add a Team"
+                    />
                 </div>
             </div>
             <div className="Sidebar__footer">
-                <p className="Sidebar__footer-text"><a href="#" className="Sidebar__footer-link">Invite your team</a> and start collaborating!</p>
+                <p className="Sidebar__footer-text"><a href="#" className="Sidebar__footer-link">Invite your
+                    team</a> and start collaborating!</p>
             </div>
 
         </div>
