@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.css';
-
 import {Title} from "../Title";
 import {Button} from "../Button";
 import {TaskCard} from "../TaskCard";
+import './style.css';
 
 const TaskList = ({tasks, onTaskClick, title}) => {
     return (

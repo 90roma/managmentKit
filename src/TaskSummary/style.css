@@ -1,0 +1,14 @@
+.Task-summary {
+    margin: 0 20px 0 0;
+}
+
+.Task-summary__count {
+    color: #fff;
+}
+
+.Task-summary__description {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: #9B9B9B;
+}
