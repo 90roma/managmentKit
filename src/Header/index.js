@@ -1,7 +1,7 @@
 import React from "react";
 import {Button} from "../Button";
 import {Avatar} from "../Avatar";
-import sideBarStrIcon from '../Avatar/sideBarStr-Icon.png';
+import Logo from '../Avatar/sideBarStr-Icon.png';
 import btnChatIcon from '../Avatar/btn-chat-icon.png';
 import avatarDev from "../Avatar/avatar-dev.png";
 import avatarMark from "../Avatar/avatar-mark.png";
@@ -12,7 +12,7 @@ const Header = ({title}) => {
     return (
         <div className="Header">
             <div className="Header__wrapper">
-                <img className="Header__logo" src={sideBarStrIcon} alt="header logo"/>
+                <img className="Header__logo" src={Logo} alt="header logo"/>
                 <h1 className="Header__title">{title}</h1>
                 <Button/>
                 <div className="Header__info">
