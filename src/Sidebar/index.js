@@ -9,7 +9,7 @@ import avatarDev from "../Avatar/avatar-dev.png";
 import avatarMark from "../Avatar/avatar-mark.png";
 import avatarDes from "../Avatar/avatar-des.png";
 import sideBarStrIcon from '../Avatar/sideBarStr-Icon.png';
-import sideBarStrIcon1 from '../Avatar/sideBarStr-Icon1.png';
+import sideBarStrIcon1 from '../Avatar/sideBarStr-icon1.png';
 import sideBarStrIcon2 from '../Avatar/sideBarStr-Icon2.png';
 import sideBarStrIcon3 from '../Avatar/sideBarStr-Icon3.png';
 import './style.css';
