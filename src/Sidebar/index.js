@@ -2,15 +2,16 @@ import React from 'react';
 import {UserInfo} from '../UserInfo';
 import {TaskSummary} from '../TaskSummary';
 import {SidebarList} from '../SidebarList';
-import {SideBarStr} from '../SideBarStr';
-import count from '../Avatar/count.png';
 import sidebarLogo from '../Avatar/sidebar-logo.png';
 import sidebarSearch from '../Avatar/search.png';
 import userNameAvatar from "../Avatar/avatar-preview.png"
-import sideBarStrIcon from '../Avatar/sideBarStr-icon.png';
-import sideBarStrIcon1 from '../Avatar/sideBarStr-icon1.png';
-import sideBarStrIcon2 from '../Avatar/sideBarStr-icon2.png';
-import sideBarStrIcon3 from '../Avatar/sideBarStr-icon3.png';
+import avatarDev from "../Avatar/avatar-dev.png";
+import avatarMark from "../Avatar/avatar-mark.png";
+import avatarDes from "../Avatar/avatar-des.png";
+import sideBarStrIcon from '../Avatar/sideBarStr-Icon.png';
+import sideBarStrIcon1 from '../Avatar/sideBarStr-Icon1.png';
+import sideBarStrIcon2 from '../Avatar/sideBarStr-Icon2.png';
+import sideBarStrIcon3 from '../Avatar/sideBarStr-Icon3.png';
 import './style.css';
 
 const Sidebar = ({title}) => {
@@ -38,34 +39,45 @@ const Sidebar = ({title}) => {
                     />
                 </div>
                 <div className="Sidebar__sidebar-list">
-                    <SidebarList
-                        title="Menu"
-                        sidebarList={[<SideBarStr text="Home"/>,
-                            <SideBarStr text="My Tasks"/>,
-                            <SideBarStr text="Notification" count={count}/>,
-                        ]}
-                    />
-                    <SidebarList
-                        title="projects"
-                        sidebarList={[<SideBarStr text="Dashboard UI Kit" icon={sideBarStrIcon}/>,
-                            <SideBarStr text="CRM System" icon={sideBarStrIcon1}/>,
-                            <SideBarStr text="Website Redesign" icon={sideBarStrIcon2}/>,
-                            <SideBarStr text="Communication Tool" icon={sideBarStrIcon3}/>
-                        ]}
-                        button="+ Add a Project"
-                    />
-                    <SidebarList
-                        title="projects"
-                        sidebarList={[<SideBarStr text="Design"/>,
-                            <SideBarStr text="Backend" />,
-                            <SideBarStr text="Frontend"/>,
-                        ]}
-                        button="+ Add a Team"
-                    />
+                    <div className="Sidebar__sidebar-list__wrapper">
+                        <SidebarList title="Menu"
+                                     text="Home"/>
+                        <SidebarList text="My Tasks"/>
+                        <SidebarList text="Notification" count="3"/>
+                    </div>
+                    <div className="Sidebar__sidebar-list__wrapper">
+                        <SidebarList title="projects"
+                                     text="Dashboard UI Kit"
+                                     icon={sideBarStrIcon}
+                        />
+                        <SidebarList text="CRM System"
+                                     icon={sideBarStrIcon1}
+                        />
+                        <SidebarList text="Website Redesign"
+                                     icon={sideBarStrIcon2}
+                        />
+                        <SidebarList text="Communication Tool"
+                                     icon={sideBarStrIcon3}
+                                     button="+ Add a Project"
+                        />
+                    </div>
+                    <div className="Sidebar__sidebar-list__wrapper">
+                        <SidebarList title="projects"
+                                     text="Design"
+                                     users={[avatarDes, avatarDev, avatarDes]}
+                        />
+                        <SidebarList text="Backend"
+                                     users={[avatarDev, avatarMark]}
+                        />
+                        <SidebarList text="Frontend"
+                                     users={[avatarDev, avatarMark, avatarDes, avatarDev]}
+                                     button="+ Add a Team"/>
+                        />
+                    </div>
                 </div>
             </div>
             <div className="Sidebar__footer">
-                <p className="Sidebar__footer-text"><a href="#" className="Sidebar__footer-link">Invite your team and</a> start collaborating!</p>
+                <p className="Sidebar__footer-text"><a href="#" className="Sidebar__footer-link">Invite your team</a> and start collaborating!</p>
             </div>
 
         </div>

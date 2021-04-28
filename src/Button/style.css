@@ -12,6 +12,7 @@
     justify-content: center;
     line-height: 21px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .Button_warning {

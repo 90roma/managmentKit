@@ -1,5 +1,19 @@
 .SidebarList {
-    margin: 30px 0;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-left: 25px;
+    border-left: 5px solid transparent;
+    cursor: pointer;
+}
+
+.SidebarList:hover {
+    background: #202020;
+    border-left: 5px solid #FFC200;
+}
+
+.SidebarList__wrapper {
+    display: flex;
 }
 
 .SidebarList__title {
@@ -8,16 +22,61 @@
     line-height: 18px;
     text-transform: uppercase;
     color: #878787;
-    margin: 0 0 11px 30px;
+    pointer-events:none;
+}
+
+.SidebarList__title-wrapper {
+    display: flex;
+    margin-left: 30px;
+    height: 40px;
+    align-items: center;
+    pointer-events:none;
 }
 
 .SidebarList__button {
-    margin: 10px 0 0 30px;
     background: none;
     border: none;
     color: #FFC200;
-    height: 22px;
     font-weight: bold;
     font-size: 14px;
     line-height: 22px;
+    cursor: pointer;
+    margin-left: 30px;
+    height: 40px;
+}
+
+.SidebarList__text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.SidebarList__count {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #FFC200;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+    color: #131313;
+}
+.SidebarList__icon {
+    margin: 0 10px 0 0;
+}
+
+.SidebarList__users {
+    margin: 0 20px 0 auto;
+}
+
+.SidebarList__user {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
 }
