@@ -5,24 +5,31 @@ import {SidebarList} from '../SidebarList';
 import sidebarLogo from '../Avatar/sidebar-logo.png';
 import sidebarSearch from '../Avatar/search.png';
 import userNameAvatar from "../Avatar/avatar-preview.png"
-import avatarDev from "../Avatar/avatar-dev.png";
-import avatarMark from "../Avatar/avatar-mark.png";
-import avatarDes from "../Avatar/avatar-des.png";
 import sideBarStrIcon from '../Avatar/SideBarStr-Icon.png';
 import sideBarStrIcon1 from '../Avatar/SideBarStr-Icon1.png';
 import sideBarStrIcon2 from '../Avatar/SideBarStr-Icon2.png';
 import sideBarStrIcon3 from '../Avatar/SideBarStr-Icon3.png';
+import avatar1 from '../Avatar/avatar1.png';
+import avatar2 from '../Avatar/avatar2.png';
+import avatar3 from '../Avatar/avatar3.png';
+import avatar4 from '../Avatar/avatar4.png';
+import avatar5 from '../Avatar/avatar5.png';
 import './style.css';
 
 const MENU_LIST = [{text: "Home"}, {text: "My Tasks"}, {text: "Notifications", count: 3}]
-const PROJECTS_LIST = [{text: "Dashboard UI Kit", icon: sideBarStrIcon}, {
-    text: "CRM System",
-    icon: sideBarStrIcon1
-}, {text: "Website Redesign", icon: sideBarStrIcon2}]
-const TEAMS_LIST = [{text: "Design", users: [avatarDev, avatarMark]}, {
-    text: "Backend",
-    users: [avatarDev, avatarMark]
-}, {text: "Frontend", users: [avatarDev, avatarMark]}]
+
+const PROJECTS_LIST = [
+    {text: "Dashboard UI Kit", icon: sideBarStrIcon},
+    {text: "CRM System", icon: sideBarStrIcon1},
+    {text: "Website Redesign", icon: sideBarStrIcon2},
+    {text: "Communication Tool", icon: sideBarStrIcon3}
+]
+
+const TEAMS_LIST = [
+    {text: "Design", users: [avatar4, avatar1, avatar3]},
+    {text: "Backend", users: [avatar5, avatar2]},
+    {text: "Frontend", users: [avatar1, avatar3, avatar4, avatar5]}
+]
 
 const Sidebar = ({title}) => {
     return (

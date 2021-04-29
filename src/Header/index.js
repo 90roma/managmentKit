@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {Button} from "../Button";
 import {Avatar} from "../Avatar";
 import logo from '../Avatar/SideBarStr-Icon.png';
@@ -8,7 +8,19 @@ import avatarMark from "../Avatar/avatar-mark.png";
 import avatarDes from "../Avatar/avatar-des.png";
 import "./style.css";
 
-const Header = ({title}) => {
+const HEADER_ITEM = ["Tasks", "Kanban", "Activity", "Calendar", "Files"];
+
+const Header = ({title, onItemClick}) => {
+    const [isSelect, setIsSelect] = useState(false)
+
+    const headerClass = (isSelect) => {
+        switch (isSelect) {
+            case true:
+                return "Header__navigation Header__navigation_selected";
+            default:
+                return "Header__navigation";
+        }
+    }
     return (
         <div className="Header">
             <div className="Header__wrapper">
@@ -23,8 +35,15 @@ const Header = ({title}) => {
                     </button>
                 </div>
             </div>
+            {HEADER_ITEM.map((item, index) =>
+                <div onClick={ () => onItemClick(item) && setIsSelect (isSelect)} key={index} className={headerClass(isSelect)}>
+                    {console.log ("massive:", item, index) }
+                    {item}
+                </div>
+            )}
         </div>
     )
 }
 
 export {Header}
+export {HEADER_ITEM}

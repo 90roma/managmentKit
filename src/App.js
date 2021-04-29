@@ -9,6 +9,7 @@ import './styles.css';
 
 export default function App() {
     const [openedTask, setOpenedTask] = useState()
+    const [openedHeaderItem, setOpenedHeaderItem] = useState()
 
     return (
         <div className="App">
@@ -18,8 +19,10 @@ export default function App() {
             <div className="App__container">
                 <Header
                     title="Website Redesign"
+                    HEADER_ITEM
+                    onItemClick={(item) => setOpenedHeaderItem(item)}
                 />
-                <div className="App__wrapper">
+                {openedHeaderItem &&  <div className="App__wrapper">
                     <div className="App__task">
                         <TaskList
                             tasks={TASKS}
@@ -46,7 +49,8 @@ export default function App() {
                         discussion={openedTask.discussion}
                     />
                     }
-                </div>
+                </div>}
+
             </div>
         </div>
     );
