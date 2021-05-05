@@ -13,7 +13,7 @@ const TaskCard = ({checkBoxCard, header, avatarUrl, tag}) => {
         switch (isSelect) {
             case true:
                 return "card card__wrapper card__wrapper_selected";
-            default:
+            case false:
                 return "card card__wrapper";
         }
     }

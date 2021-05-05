@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 import {Button} from "../Button";
 import {Avatar} from "../Avatar";
 import logo from '../Avatar/SideBarStr-Icon.png';
@@ -13,14 +13,10 @@ const HEADER_ITEM = ["Tasks", "Kanban", "Activity", "Calendar", "Files"];
 const Header = ({title, onItemClick}) => {
     const [isSelect, setIsSelect] = useState(false)
 
-    const headerClass = (isSelect) => {
-        switch (isSelect) {
-            case true:
-                return "Header__navigation Header__navigation_selected";
-            default:
-                return "Header__navigation";
-        }
+    const headerClass = (item) => {
+        return item === isSelect ? "Header__navigation Header__navigation_selected" : "Header__navigation";
     }
+
     return (
         <div className="Header">
             <div className="Header__wrapper">
@@ -36,8 +32,10 @@ const Header = ({title, onItemClick}) => {
                 </div>
             </div>
             {HEADER_ITEM.map((item, index) =>
-                <div onClick={ () => onItemClick(item) && setIsSelect (isSelect)} key={index} className={headerClass(isSelect)}>
-                    {console.log ("massive:", item, index) }
+                <div onClick={ () => {
+                    {onItemClick(item)}
+                    {setIsSelect(item)}}
+                } className={headerClass(item)} key={index}>
                     {item}
                 </div>
             )}
@@ -46,4 +44,3 @@ const Header = ({title, onItemClick}) => {
 }
 
 export {Header}
-export {HEADER_ITEM}

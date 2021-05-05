@@ -35,9 +35,9 @@ const Sidebar = ({title}) => {
     return (
         <div className="Sidebar">
             <div className="Sidebar__title-wrapper">
-                <img src={sidebarLogo}/>
+                <img src={sidebarLogo} alt="logo"/>
                 <h3 className="Sidebar__title">{title}</h3>
-                <img src={sidebarSearch}/>
+                <img src={sidebarSearch} alt="icon search"/>
             </div>
             <div className="Sidebar__user-info">
                 <UserInfo
