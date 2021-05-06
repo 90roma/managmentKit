@@ -8,7 +8,7 @@ import {Sidebar} from "./Sidebar";
 import './styles.css';
 
 export default function App() {
-    const [openedTask, setOpenedTask] = useState()
+    const [openedTask, setOpenedTask] = useState(TASKS[0])
     const [openedHeaderItem, setOpenedHeaderItem] = useState()
 
     return (
@@ -28,11 +28,13 @@ export default function App() {
                             tasks={TASKS}
                             title="Backlog"
                             onTaskClick={(task) => setOpenedTask(task)}
+                            openedTaskId={openedTask.id}
                         />
                         <TaskList
                             tasks={TASKS}
                             title="To Do"
                             onTaskClick={(task) => setOpenedTask(task)}
+                            openedTaskId={openedTask.id}
                         />
                     </div>
                     {openedTask && <Task

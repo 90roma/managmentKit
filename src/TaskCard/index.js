@@ -5,21 +5,12 @@ import { Tag } from "../Tag";
 import { Avatar } from "../Avatar";
 import {Title} from "../Title";
 
-const TaskCard = ({checkBoxCard, header, avatarUrl, tag}) => {
+const TaskCard = ({checkBoxCard, header, avatarUrl, tag, isSelect}) => {
     const [isState, setIsState] = useState(false)
-    const [isSelect, setIsSelect] = useState(false)
-
-    const cardClass = (isSelect) => {
-        switch (isSelect) {
-            case true:
-                return "card card__wrapper card__wrapper_selected";
-            case false:
-                return "card card__wrapper";
-        }
-    }
+    const taskCardClassName = isSelect ? "card card__wrapper card__wrapper_selected" : "card card__wrapper";
 
   return (
-      <div onClick={ () => setIsSelect (!isSelect) } className={cardClass(isSelect)}>
+      <div className={taskCardClassName}>
         <div className="card__heading-wrapper">
             <div onClick={ ()=> setIsState(!isState) }>
                 <CheckBox className="CheckBox" value={isState} task={checkBoxCard} />

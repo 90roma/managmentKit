@@ -4,7 +4,7 @@ import {Button} from "../Button";
 import {TaskCard} from "../TaskCard";
 import './style.css';
 
-const TaskList = ({tasks, onTaskClick, title}) => {
+const TaskList = ({tasks, onTaskClick, title, openedTaskId}) => {
     return (
         <div className="Task-list">
             <div className="Task-list__title-wrapper">
@@ -20,6 +20,7 @@ const TaskList = ({tasks, onTaskClick, title}) => {
                         header={task.title}
                         tag={task.tags[0]}
                         avatarUrl={task.avatar}
+                        isSelect={openedTaskId === task.id}
                     />
                 </div>
             )}
