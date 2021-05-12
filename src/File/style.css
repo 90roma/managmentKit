@@ -12,6 +12,7 @@
 
 .File__preview-url {
     align-self: flex-start;
+    cursor: pointer;
 }
 
 .File__size {

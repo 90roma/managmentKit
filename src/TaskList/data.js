@@ -17,7 +17,7 @@ const TASKS = [{
     tags: ["development"],
     followers: [avatarDev, avatarMark, avatarDes],
     description: "Task Descriptions are used during project planning, project execution and project control. During project planning the task descriptions are used for scope planning and creating estimates. During project execution the task description is used by those doing the activities to ensure they are doing the work correctly.",
-    files: [{fileName: "Redesign Brief 2019.pdf", fileSize: "159 KB", filePreview: avatarPdf, fileType: "pdf"}, {fileName: "Header.png", fileSize: "129 KB", filePreview: avatarRoad, fileType: "png"}],
+    files: [{id: 3, fileName: "Redesign Brief 2019.pdf", fileSize: "159 KB", filePreview: avatarPdf, fileType: "pdf", fileButton: "Delete"}, {id: 4, fileName: "Header.png", fileSize: "129 KB", filePreview: avatarRoad, fileType: "png", fileButton: "Delete"}],
     discussion: [{
         comment: "During a project build, it is necessary to evaluate the product design and development against project requirements and outcomes",
         avatar: avatarComment,

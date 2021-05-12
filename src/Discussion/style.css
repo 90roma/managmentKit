@@ -7,9 +7,7 @@
     border-radius: 10px;
 }
 
-.Discussion__text-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+.Discussion__wrapper {
     margin-left: -47px;
 }
 
@@ -30,6 +28,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+    margin-left: 2px;
 }
 
 .Discussion__date {
@@ -46,4 +45,10 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
+}
+
+.Discussion__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

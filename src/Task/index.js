@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Title} from "../Title";
 import {Button} from "../Button";
 import {CheckBox} from "../CheckBox";
@@ -6,10 +6,47 @@ import {Avatar} from "../Avatar";
 import {Tag} from "../Tag";
 import {File} from "../File";
 import {Discussion} from "../Discussion";
+import userNameAvatar from "../Avatar/avatar-preview.png"
 import avatarAdd from "../Avatar/avatar-add.png";
 import './style.css';
 
-const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, description, discussion, avatar, files}) => {
+const Task = ({
+                  title,
+                  author,
+                  createdAt,
+                  asignTo,
+                  deadLine,
+                  tags,
+                  followers,
+                  description,
+                  discussion,
+                  avatar,
+                  files,
+              }) => {
+    const [comments, setComments] = useState(discussion)
+    const [newComment, setNewComment] = useState('')
+    const [buttonState, setButtonState] = useState(true)
+    const [taskFile, setTaskFile] = useState(files)
+
+    const removeFile = (id) => {
+        setTaskFile(prevState => prevState.filter(el => el.id !== id))
+    }
+
+    const changeButtonState = (buttonState) => {
+        setButtonState(!buttonState)
+    }
+
+    const addComment = (newComment) => {
+        const newComments = [{
+            avatar: userNameAvatar,
+            name: "Emilee Simchenko",
+            position: "Web developer",
+            comment: newComment,
+            date: "Yesterday at 12:37pm"
+        }, ...comments]
+        setComments(newComments)
+    }
+
     return (
         <div className="Task">
             <div className="Task__container">
@@ -53,19 +90,35 @@ const Task = ({title, author, createdAt, asignTo, deadLine, tags, followers, des
                     <Title headingUppercase="description"/>
                     <p className="Task__text"> {description} </p>
                     <div className="Task__file">
-                        {files.map((file) => <File
+                        {taskFile.map((file) => <File
                             url={file.filePreview}
                             fileName={file.fileName}
                             size={file.fileSize}
                             type={file.fileType}
+                            id={file.id}
+                            fileButton={file.fileButton}
+                            removeFile={removeFile}
                         />)}
                     </div>
                 </div>
                 <div className="Task__discussion">
                     <Title headingUppercase="discussion"/>
-                    {discussion.map((dis) => <Discussion
+                    <div className="Task__textarea-wrapper">
+                        <img className="Task__discussion__avatar" src={userNameAvatar} alt="user avatar"/>
+                        <textarea className="Task__discussion__textarea" placeholder="Add a comment..."
+                                  value={newComment}
+                                  maxLength="250"
+                                  onChange={(event) => {
+                                      setNewComment(event.target.value)
+                                      changeButtonState(event.target.value.length >= 2)
+                                  }
+                                  }
+                        />
+                    </div>
+                    <button disabled={buttonState} onClick={() => addComment(newComment)}>Send</button>
+                    {comments.map((dis) => <Discussion
                             authorAvatarUrl={dis.avatar}
-                            authorNmae={dis.name}
+                            authorName={dis.name}
                             position={dis.position}
                             date={dis.date}
                             comment={dis.comment}

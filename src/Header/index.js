@@ -31,11 +31,12 @@ const Header = ({title, onItemClick}) => {
                     </button>
                 </div>
             </div>
-            {HEADER_ITEM.map((item, index) =>
+            {HEADER_ITEM.map((item) =>
                 <div onClick={ () => {
-                    {onItemClick(item)}
-                    {setIsSelect(item)}}
-                } className={headerClass(item)} key={index}>
+                        {onItemClick(item)}
+                        {setIsSelect(item)}
+                    }
+                } className={headerClass(item)} key={item}>
                     {item}
                 </div>
             )}
