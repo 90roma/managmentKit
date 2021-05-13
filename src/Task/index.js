@@ -25,15 +25,13 @@ const Task = ({
               }) => {
     const [comments, setComments] = useState(discussion)
     const [newComment, setNewComment] = useState('')
-    const [buttonState, setButtonState] = useState(true)
     const [taskFile, setTaskFile] = useState(files)
+
+    const maxCommentLength = 250
+    const isSendCommentButtonDisabled = newComment.length <= 2 || newComment.length >= maxCommentLength
 
     const removeFile = (id) => {
         setTaskFile(prevState => prevState.filter(el => el.id !== id))
-    }
-
-    const changeButtonState = (buttonState) => {
-        setButtonState(!buttonState)
     }
 
     const addComment = (newComment) => {
@@ -107,15 +105,14 @@ const Task = ({
                         <img className="Task__discussion__avatar" src={userNameAvatar} alt="user avatar"/>
                         <textarea className="Task__discussion__textarea" placeholder="Add a comment..."
                                   value={newComment}
-                                  maxLength="250"
+                                  maxLength={maxCommentLength}
                                   onChange={(event) => {
                                       setNewComment(event.target.value)
-                                      changeButtonState(event.target.value.length >= 2)
                                   }
                                   }
                         />
                     </div>
-                    <button disabled={buttonState} onClick={() => addComment(newComment)}>Send</button>
+                    <button disabled={isSendCommentButtonDisabled} onClick={() => addComment(newComment)}>Send</button>
                     {comments.map((dis) => <Discussion
                             authorAvatarUrl={dis.avatar}
                             authorName={dis.name}
