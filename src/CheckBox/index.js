@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const CheckBox = ({value, checkBoxCard}) => {
+const CheckBox = ({value, checkBoxCard, onChange}) => {
 
     const checkBoxClassTask = (value) => {
         switch (value) {
@@ -23,6 +23,7 @@ const CheckBox = ({value, checkBoxCard}) => {
 
     return (
         <div>
+            <input type="checkbox" onChange={onChange} value={value}/>
             <div className={checkBoxClassTask(value)}/>
             <div className={checkBoxClass(checkBoxCard)}/>
         </div>
