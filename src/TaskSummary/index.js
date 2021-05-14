@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
 
-const TaskSummary = ({countDescription, count}) => {
-    return (
-        <div className="Task-summary">
-            <p className="Task-summary__count">{count}</p>
-            <p className="Task-summary__description">{countDescription}</p>
-        </div>
-    )
+const TaskSummary = ({ countDescription, count }) => {
+  return (
+    <div className="Task-summary">
+      <span className="Task-summary__count">{count}</span>
+      <span className="Task-summary__description">{countDescription}</span>
+    </div>
+  );
 };
 
-export {TaskSummary}
+export { TaskSummary };
