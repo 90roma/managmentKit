@@ -1,33 +1,35 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
-const CheckBox = ({value, checkBoxCard, onChange}) => {
-
-    const checkBoxClassTask = (value) => {
-        switch (value) {
-            case true:
-                return "CheckBox__card_default CheckBox_active";
-            case false:
-                return "CheckBox__card_default";
-        }
-    }
-
-    const checkBoxClass = (checkBoxCard) => {
-        switch (checkBoxCard) {
-            case false:
-                return "CheckBox";
-            case true:
-                return "CheckBox CheckBox_active";
-        }
-    }
-
-    return (
+const CheckBox = ({ value, onChange, bigCheckbox, smallCheckbox }) => {
+  return (
+    <div>
+      {Boolean(smallCheckbox) && (
         <div>
-            <input type="checkbox" onChange={onChange} value={value}/>
-            <div className={checkBoxClassTask(value)}/>
-            <div className={checkBoxClass(checkBoxCard)}/>
+          <input
+            id="checkbox"
+            type="checkbox"
+            className="CheckBox"
+            onChange={onChange}
+            value={value}
+          />
+          <label htmlFor="checkbox" />
         </div>
-    );
-}
+      )}
+      {Boolean(bigCheckbox) && (
+        <div>
+          <input
+            id="checkbox"
+            type="checkbox"
+            className="CheckBox CheckboxBig"
+            onChange={onChange}
+            value={value}
+          />
+          <label htmlFor="checkbox" />
+        </div>
+      )}
+    </div>
+  );
+};
 
-export {CheckBox};
+export { CheckBox };

@@ -28,7 +28,8 @@ const Task = ({
   const [taskFile, setTaskFile] = useState(files);
 
   const maxCommentLength = 250;
-  const isSendCommentButtonDisabled = newComment.length <= 2 || newComment.length >= maxCommentLength;
+  const isSendCommentButtonDisabled =
+    newComment.length <= 2 || newComment.length >= maxCommentLength;
 
   const removeFile = (id) => {
     setTaskFile((prevState) => prevState.filter((file) => file.id !== id));
@@ -57,9 +58,7 @@ const Task = ({
             <span className="text subtitle">{`Added by ${author} ${createdAt}`}</span>
           </div>
           <div className="Task__button-wrapper">
-            <div>
-              <CheckBox checkBoxCard={false} />
-            </div>
+            <CheckBox bigCheckbox />
             <Button />
           </div>
         </div>
