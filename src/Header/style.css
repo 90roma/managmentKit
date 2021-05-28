@@ -1,88 +1,88 @@
 .Header {
-    background: #fff;
-    height: 136px;
-    padding-left: 35px;
+  background: #fff;
+  height: 136px;
+  padding-left: 35px;
 }
 
 .Header__wrapper {
-    padding-top: 35px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .Header__title {
-    margin: 0 15px;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 47px;
-    color: #131313;
+  margin: 0 15px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 47px;
+  color: #131313;
 }
 
 .Header__logo {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .Header__navigation {
-    display: inline-block;
-    height: 33px;
-    margin: 0 30px 0 0;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 23px;
-    color: #131313;
-    opacity: 0.7;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
+  display: inline-block;
+  height: 33px;
+  margin: 0 30px 0 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #131313;
+  opacity: 0.7;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
 
 .Header__navigation:hover {
-    border-bottom: 2px solid #FFC200;
-    opacity: 1;
+  border-bottom: 2px solid #ffc200;
+  opacity: 1;
 }
 
 .Header__navigation_selected {
-    border-bottom: 2px solid #FFC200;
-    opacity: 1;
+  border-bottom: 2px solid #ffc200;
+  opacity: 1;
 }
 
 .Header__button {
-    background: #EAEAEA;
-    padding: 5px 15px;
-    color: #131313;
-    cursor: pointer;
+  background: #eaeaea;
+  padding: 5px 15px;
+  color: #131313;
+  cursor: pointer;
 }
 
 .Header__info {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .Header__button-chat {
-    display: flex;
-    align-items: center;
-    margin: 0 30px 0 15px;
-    background: #FFF8DD;
-    padding: 5px 15px;
-    color: #FFC200;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0 30px 0 15px;
+  background: #fff8dd;
+  padding: 5px 15px;
+  color: #ffc200;
+  cursor: pointer;
 }
 
 .Header__button-chat-icon {
-    margin-right: 5px;;
+  margin-right: 5px;
 }
 
 .Header__users {
-    margin: 0 15px 0 auto;
+  margin: 0 15px 0 auto;
 }
 
 .Header__user {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .Header__fff {
-    display: inline-block;
+  display: inline-block;
 }
