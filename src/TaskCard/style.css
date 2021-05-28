@@ -1,34 +1,34 @@
 .card {
-    max-width: 345px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: #f7f6f3;
-    border-radius: 10px;
-    cursor: pointer;
+  max-width: 345px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #f7f6f3;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .card__wrapper {
-    margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .card__wrapper_selected {
-    background: #FFF8DD;
+  background: #fff8dd;
 }
 
 .card-header {
-    font-size: 18px;
-    line-height: 27px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .card__department-wrapper {
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 40px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 40px;
 }
 
 .card__heading-wrapper {
-    margin: 0 0 8px 0;
-    display: flex;
+  margin: 0 0 8px 0;
+  display: flex;
 }

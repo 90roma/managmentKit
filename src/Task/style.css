@@ -1,100 +1,98 @@
 .Task {
-    display: flex;
-    border-radius: 8px;
-    background: #fff;
-    color: #131313;
-    max-width: 636px;
-    margin: 0 30px 0 0;
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  color: #131313;
+  max-width: 636px;
+  margin: 0 30px 0 0;
 }
 
 .Task__container {
-    padding: 0 30px 20px 30px;
+  padding: 0 30px 20px 30px;
 }
 
 .Task__title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 20px 0;
 }
 
 .Task__info {
-    display: flex;
-    padding: 0 0 30px 0;
-    margin: 30px 0 0 0;
-    border-bottom: 1px solid #ececec;
+  display: flex;
+  padding: 0 0 30px 0;
+  margin: 30px 0 0 0;
+  border-bottom: 1px solid #ececec;
 }
 
 .Task__text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    margin: 20px 0 0 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  margin: 20px 0 0 0;
 }
 
 .Task__info__text {
-    line-height: 20px;
-    font-weight: 400;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .Task__info__asign-wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Task__info__wrapper {
-    min-height: 50px;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  min-height: 50px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Task__button-wrapper {
-    min-width: 100px;
-    display: flex;
-    justify-content: space-between;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Task__description {
-    margin: 30px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 .Task__info__button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 50%;
-    background: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: none;
 }
 
 .Task__discussion {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .Task__textarea-wrapper {
-    display: flex;
-    margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 }
 
 .Task__discussion__textarea {
-    max-width: 487px;
-    width: 100%;
-    padding: 10px 15px;
-    height: auto;
-    background: #EAEAEA;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 21px;
-    color: #131313;
+  max-width: 487px;
+  width: 100%;
+  padding: 10px 15px;
+  height: auto;
+  background: #eaeaea;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #131313;
 }
 
 .Task__discussion__avatar {
-    margin-right: 10px;
-    width: 48px;
-    height: 48px;
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
 }
-
-
-

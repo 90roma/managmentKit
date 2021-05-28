@@ -1,38 +1,61 @@
-import React, { useState } from "react";
-import { TASKS } from "./TaskList/data";
-import { Task } from "./Task";
-import { Header } from "./Header";
-import { TaskList } from "./TaskList";
-import { Sidebar } from "./Sidebar";
+import React, { useState } from 'react';
+import { TASKS } from './TaskList/data';
+import { Task } from './Task';
+import { Header } from './Header';
+import { TaskList } from './TaskList';
+import { Sidebar } from './Sidebar';
 
-import "./styles.css";
+import './styles.css';
 
 export default function App() {
-  const [openedTask, setOpenedTask] = useState(TASKS[0]);
   const [openedHeaderItem, setOpenedHeaderItem] = useState();
+  const [tasks, setTasks] = useState(TASKS);
 
+  const backlogTasks = tasks.filter((task) => task.category === 'backlog');
+  const todoTasks = tasks.filter((task) => task.category === 'todo');
+  const openedTask = tasks.find((task) => task.openedTask);
+
+  console.log(tasks);
   return (
-    <div className="App">
-      <Sidebar title="Projectus" />
-      <div className="App__container">
+    <div className='App'>
+      <Sidebar title='Projectus' />
+      <div className='App__container'>
         <Header
-          title="Website Redesign"
+          title='Website Redesign'
           HEADER_ITEM
           onItemClick={(item) => setOpenedHeaderItem(item)}
         />
         {openedHeaderItem && (
-          <div className="App__wrapper">
-            <div className="App__task">
+          <div className='App__wrapper'>
+            <div className='App__task'>
               <TaskList
-                tasks={TASKS}
-                title="Backlog"
-                onTaskClick={(task) => setOpenedTask(task)}
+                tasks={backlogTasks}
+                title='Backlog'
+                onTaskClick={(selectedTask) => {
+                  const newTasks = tasks.map((task) => {
+                    if (selectedTask.id === task.id) {
+                      return { ...task, openedTask: true };
+                    } else {
+                      return { ...task, openedTask: false };
+                    }
+                  });
+                  setTasks(newTasks);
+                }}
                 openedTaskId={openedTask.id}
               />
               <TaskList
-                tasks={TASKS}
-                title="To Do"
-                onTaskClick={(task) => setOpenedTask(task)}
+                tasks={todoTasks}
+                title='To Do'
+                onTaskClick={(selectedTask) => {
+                  const newTasks = tasks.map((task) => {
+                    if (selectedTask.id === task.id) {
+                      return { ...task, openedTask: true };
+                    } else {
+                      return { ...task, openedTask: false };
+                    }
+                  });
+                  setTasks(newTasks);
+                }}
                 openedTaskId={openedTask.id}
               />
             </div>
